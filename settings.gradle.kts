@@ -1,2 +1,2 @@
-rootProject.name = "plugintemplate"
+rootProject.name = "regions"
 

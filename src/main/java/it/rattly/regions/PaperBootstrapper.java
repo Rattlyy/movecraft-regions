@@ -1,4 +1,4 @@
-package it.rattly.plugintemplate;
+package it.rattly.regions;
 
 import io.papermc.paper.plugin.bootstrap.BootstrapContext;
 import io.papermc.paper.plugin.bootstrap.PluginBootstrap;
@@ -14,6 +14,6 @@ public class PaperBootstrapper implements PluginBootstrap {
 
     @Override
     public @NotNull JavaPlugin createPlugin(@NotNull PluginProviderContext context) {
-        return PluginTemplate.INSTANCE;
+        return MovecraftRegions.INSTANCE;
     }
 }

@@ -1,4 +1,4 @@
-package it.rattly.plugintemplate;
+package it.rattly.regions;
 
 import com.google.gson.Gson;
 import io.papermc.paper.plugin.loader.PluginClasspathBuilder;

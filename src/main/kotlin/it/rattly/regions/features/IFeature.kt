@@ -1,4 +1,4 @@
-package it.rattly.plugintemplate.features
+package it.rattly.regions.features
 
 import org.bukkit.event.Listener
 

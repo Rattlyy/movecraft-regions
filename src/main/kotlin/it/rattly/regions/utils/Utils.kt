@@ -1,8 +1,8 @@
-package it.rattly.plugintemplate.utils
+package it.rattly.regions.utils
 
 import io.github.classgraph.ClassGraph
 import io.github.classgraph.ScanResult
-import it.rattly.plugintemplate.PluginTemplate
+import it.rattly.regions.MovecraftRegions
 import kotlin.reflect.KClass
 
 // remember to call close on this else memory leaks ._.
@@ -11,7 +11,7 @@ val cachedScan: ScanResult by lazy {
     ClassGraph()
         .enableClassInfo()
         .enableAnnotationInfo()
-        .acceptPackages(PluginTemplate.pluginMeta.mainClass.split(".").dropLast(1).joinToString("."))
+        .acceptPackages(MovecraftRegions.pluginMeta.mainClass.split(".").dropLast(1).joinToString("."))
         .scan()
 }
 

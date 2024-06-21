@@ -1,17 +1,17 @@
-package it.rattly.plugintemplate
+package it.rattly.regions
 
 import dev.jorel.commandapi.CommandAPI
-import it.rattly.plugintemplate.commands.ICommand
-import it.rattly.plugintemplate.features.IFeature
-import it.rattly.plugintemplate.utils.Command
-import it.rattly.plugintemplate.utils.Feature
-import it.rattly.plugintemplate.utils.cachedScan
-import it.rattly.plugintemplate.utils.getAllAnnotatedWith
+import it.rattly.regions.commands.ICommand
+import it.rattly.regions.features.IFeature
+import it.rattly.regions.utils.Command
+import it.rattly.regions.utils.Feature
+import it.rattly.regions.utils.cachedScan
+import it.rattly.regions.utils.getAllAnnotatedWith
 import net.axay.kspigot.main.KSpigot
 import kotlin.system.measureTimeMillis
 
 @Suppress("UnstableApiUsage")
-object PluginTemplate: KSpigot() {
+object MovecraftRegions: KSpigot() {
     private val features by getAllAnnotatedWith<IFeature>(Feature::class)
     private val commands by getAllAnnotatedWith<ICommand>(Command::class)
 

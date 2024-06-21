@@ -7,26 +7,27 @@ import java.nio.file.Files
 import java.security.MessageDigest
 
 plugins {
-    kotlin("jvm") version "1.9.22"
+    kotlin("jvm") version "2.0.0"
 
-    id("io.papermc.paperweight.userdev") version "1.5.5"
+    id("io.papermc.paperweight.userdev") version "1.7.1"
     id("net.minecrell.plugin-yml.paper") version "0.6.0"
 }
 
-var mainClassName = "PluginTemplate"
+val mainClassName = "MovecraftRegions"
 group = "it.rattly"
 version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 
+    maven("https://repo.papermc.io/repository/maven-public")
     maven("https://repo.codemc.org/repository/maven-public/")
     maven("https://maven.enginehub.org/repo/")
     maven("https://jitpack.io")
 }
 
 dependencies {
-    paperweight.paperDevBundle("1.20.4-R0.1-SNAPSHOT")
+    paperweight.paperDevBundle("1.20.5-R0.1-SNAPSHOT")
 
     library(kotlin("stdlib"))
     library(kotlin("reflect"))
@@ -57,7 +58,11 @@ paper {
 }
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(21)
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 }
 
 tasks {
